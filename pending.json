@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "generated_utc": "2026-07-07T12:59:01+00:00",
+  "generated_utc": "2026-07-07T15:22:07+00:00",
   "trend_note": null,
   "items": [
     {
@@ -13,6 +13,15 @@
       "image": "https://www.ans.org/file/24168/l/26-094-Web-Banner-Fina.jpg"
     },
     {
+      "title": "ON CAM: China Flaunts Sea-Based Nuclear Power, Stirs Pacific With Missile Test; Worry In U.S.",
+      "url": "https://timesofindia.indiatimes.com/videos/international/on-cam-china-flaunts-sea-based-nuclear-power-stirs-pacific-with-missile-test-worry-in-u-s-/videoshow/132241092.cms",
+      "source": "The Times of India",
+      "published": "2026-07-07T13:39:14+00:00",
+      "category": "Global Fleet",
+      "blurb": "China has conducted a rare public test of its sea-based nuclear capability, launching a strategic missile from a nuclear-powered ballistic missile submarine into the Pacific Ocean. Dramatic images released by the\u2026",
+      "image": "https://static.toiimg.com/thumb/msid-132241092,width-1280,height-720,imgsize-28964,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
+    },
+    {
       "title": "Standard Nuclear seeks to raise up to $383.3M in US IPO",
       "url": "https://au.investing.com/news/stock-market-news/standard-nuclear-seeks-to-raise-up-to-3833m-in-us-ipo-4521041",
       "source": "Investing.com Australia",
@@ -20,15 +29,6 @@
       "category": "Corporate & Capital",
       "blurb": "Full story at Investing.com Australia.",
       "image": null
-    },
-    {
-      "title": "Polish company SGE hopes to deploy 14 BWRX-300 reactors in U.K.",
-      "url": "https://www.ans.org/news/article-8183/polish-company-sge-hopes-to-deploy-14-bwrx300-reactors-in-uk/",
-      "source": "American Nuclear Society",
-      "published": "2026-07-07T12:19:12+00:00",
-      "category": "Deployment & Construction",
-      "blurb": "Synthos Green Energy, a development and investment company headquartered in Warsaw, Poland, has announced a proposal to deploy 14 GE Vernova Hitachi Nuclear Energy BWRX-300 small modular reactors at three multiunit\u2026",
-      "image": "https://www.ans.org/file/24877/l/SGEBWRX.jpg"
     }
   ]
 }
