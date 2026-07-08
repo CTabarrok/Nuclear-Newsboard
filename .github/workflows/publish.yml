@@ -1,0 +1,35 @@
+name: Approve & publish
+
+on:
+  workflow_dispatch:          # click "Run workflow" — this IS the approval
+    inputs:
+      picks:
+        description: "Story numbers to publish (3 of 6), e.g. 1,4,6"
+        required: true
+        default: "1,2,3"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Promote pending.json to the archive
+        env:
+          PICKS: ${{ inputs.picks }}
+        run: python publish.py
+
+      - name: Commit edition
+        run: |
+          git config user.name "newsboard-bot"
+          git config user.email "actions@github.com"
+          git add news-*.json archive_index.json
+          git diff --cached --quiet || git commit -m "Publish edition $(date -u +%F)"
+          git push
