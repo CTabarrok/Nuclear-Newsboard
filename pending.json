@@ -1,34 +1,61 @@
 {
-  "date": "2026-07-07",
-  "generated_utc": "2026-07-07T15:22:07+00:00",
+  "date": "2026-07-08",
+  "generated_utc": "2026-07-08T17:58:13+00:00",
   "trend_note": null,
   "items": [
     {
-      "title": "DOE selects first companies for nuclear launch pad",
-      "url": "https://www.ans.org/news/article-7988/doe-selects-first-companies-for-nuclear-launch-pad/",
-      "source": "American Nuclear Society",
-      "published": "2026-07-07T05:27:12+00:00",
-      "category": "Policy & Licensing",
-      "blurb": "The Department of Energy\u2019s Office of Nuclear Energy and the National Reactor Innovation Center have announced their first selections for the Nuclear Energy Launch Pad: three companies developing microreactors and one\u2026",
-      "image": "https://www.ans.org/file/24168/l/26-094-Web-Banner-Fina.jpg"
-    },
-    {
-      "title": "ON CAM: China Flaunts Sea-Based Nuclear Power, Stirs Pacific With Missile Test; Worry In U.S.",
-      "url": "https://timesofindia.indiatimes.com/videos/international/on-cam-china-flaunts-sea-based-nuclear-power-stirs-pacific-with-missile-test-worry-in-u-s-/videoshow/132241092.cms",
-      "source": "The Times of India",
-      "published": "2026-07-07T13:39:14+00:00",
-      "category": "Global Fleet",
-      "blurb": "China has conducted a rare public test of its sea-based nuclear capability, launching a strategic missile from a nuclear-powered ballistic missile submarine into the Pacific Ocean. Dramatic images released by the\u2026",
-      "image": "https://static.toiimg.com/thumb/msid-132241092,width-1280,height-720,imgsize-28964,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
-    },
-    {
-      "title": "Standard Nuclear seeks to raise up to $383.3M in US IPO",
-      "url": "https://au.investing.com/news/stock-market-news/standard-nuclear-seeks-to-raise-up-to-3833m-in-us-ipo-4521041",
-      "source": "Investing.com Australia",
-      "published": "2026-07-07T11:54:30+00:00",
+      "title": "Dukovany project on schedule, says Czech ministry's progress report",
+      "url": "https://www.world-nuclear-news.org//articles/czechs-report-on-progress-in-first-year-of-dukovany-project",
+      "source": "World Nuclear News",
+      "published": "2026-07-08T11:47:51+00:00",
       "category": "Corporate & Capital",
-      "blurb": "Full story at Investing.com Australia.",
-      "image": null
+      "blurb": "Geotechnical surveys, including drilling more than 13 kilometres of exploratory wells, have been completed, the first conceptual design has been submitted, and several Czech suppliers selected in the year since\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/Dukovany_geosurveys_730_Czechtradeministry_25345.jpg"
+    },
+    {
+      "title": "Trilateral cooperation agreement on SMR deployment",
+      "url": "https://www.world-nuclear-news.org//articles/trilateral-cooperation-agreement-on-smr-deployment",
+      "source": "World Nuclear News",
+      "published": "2026-07-08T14:06:46+00:00",
+      "category": "Global Fleet",
+      "blurb": "The USA, Japan and South Korea have signed a memorandum of cooperation to support trilateral cooperation on accelerating small modular reactor deployments in third countries, with an initial focus on the Indo-Pacific\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/USA-Japan-KoreaSMRs(MOFA)_91007.jpg"
+    },
+    {
+      "title": "Four Micro Reactors Hit Criticality Milestones Crossing DOE\u2019s Finish Line on July 4th",
+      "url": "https://neutronbytes.com/2026/07/08/four-micro-reactors-hit-criticality-milestones-crossing-does-finish-line-on-july-4th/",
+      "source": "Neutron Bytes",
+      "published": "2026-07-08T13:28:41+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "Four Micro Reactors Meet Criticality Milestones On 07/04/26 as part of the U.S. Department of Energy Reactor Pilot Program, Aalo Atomics\u2019 advanced reactor design, Aalo-X, was the fourth firm to successfully complete a\u2026",
+      "image": "https://neutronbytes.com/wp-content/uploads/2026/07/race-horses-finish-line.png"
+    },
+    {
+      "title": "Deep Fission receives prototype reactor canister",
+      "url": "https://www.world-nuclear-news.org//articles/deep-fission-receives-prototype-reactor-canister",
+      "source": "World Nuclear News",
+      "published": "2026-07-08T11:55:49+00:00",
+      "category": "Deployment & Construction",
+      "blurb": "California-based startup Deep Fission, which aims to place small modular reactors in boreholes a mile underground, has announced the delivery of its prototype reactor canister for its pilot project to the Parsons site\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/Reactorcanister(DeepFission)_60030.jpg"
+    },
+    {
+      "title": "Fuel loading completed at Mochovce 4",
+      "url": "https://www.world-nuclear-news.org//articles/fuel-loading-completed-at-mochovce-4",
+      "source": "World Nuclear News",
+      "published": "2026-07-06T12:49:33+00:00",
+      "category": "Fuel Cycle",
+      "blurb": "Slovensk\u00e9 elektr\u00e1rne has announced that all 349 nuclear fuel assemblies have been successfully loaded into Mochovce 4. The process took five days, and was completed on Friday 3 July.",
+      "image": "https://world-nuclear-news.org/images/articles/MochovceNPP_730_se_72859.jpg"
+    },
+    {
+      "title": "Google Invests in $468-Million Funding Round for German Fusion Group",
+      "url": "https://www.powermag.com/google-invests-in-468-million-funding-round-for-german-fusion-group/",
+      "source": "POWER Magazine",
+      "published": "2026-07-07T15:42:34+00:00",
+      "category": "Corporate & Capital",
+      "blurb": "Proxima Fusion, a Munich, Germany-based group that is considered among the leading European companies working on fusion energy, said it completed a \u20ac411 million ($468 million) funding round. Proxima on July 7 said\u2026",
+      "image": "https://www.powermag.com/wp-content/uploads/2026/07/proxmia-fusion.jpg"
     }
   ]
 }

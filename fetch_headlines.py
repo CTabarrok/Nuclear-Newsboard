@@ -399,10 +399,18 @@ def send_email(payload, date_str):
         f'<div style="margin-top:22px;padding:16px;background:#232021;border-radius:6px;max-width:820px;">'
         f'<div style="font-family:monospace;font-size:12px;color:#FFD572;letter-spacing:1px;margin-bottom:8px;">TO PUBLISH</div>'
         f'<div style="font-family:Arial;font-size:13px;color:#F0EBE3;line-height:1.6;">'
-        f'1. <a href="{approve}" style="color:#FFD572;">Open the publish workflow</a> and click <b>Run workflow</b>.<br>'
-        f'2. In the <b>picks</b> box, enter your three story numbers, e.g. <span style="font-family:monospace;background:#2D2A2B;padding:1px 6px;border-radius:3px;color:#FFD572;">1,4,6</span>. '
-        f'Leave it as 1,2,3 to take the default set.<br>'
-        f'3. Run &mdash; the board updates in about a minute.</div></div>'
+        + (
+            f'<a href="{approve_page}" style="display:inline-block;background:#C4A046;color:#2D2A2B;'
+            f'padding:11px 22px;font-family:monospace;font-weight:bold;text-decoration:none;'
+            f'border-radius:5px;">Review &amp; pick 3 &rarr;</a>'
+            f'<div style="margin-top:8px;color:#BDB6AE;">No GitHub account needed &mdash; tick three stories, hit publish.</div>'
+            if approve_page else
+            f'1. <a href="{gh_link}" style="color:#FFD572;">Open the publish workflow</a> and click <b>Run workflow</b>.<br>'
+            f'2. In the <b>picks</b> box, enter your three story numbers, e.g. <span style="font-family:monospace;background:#2D2A2B;padding:1px 6px;border-radius:3px;color:#FFD572;">1,4,6</span>. '
+            f'Leave it as 1,2,3 to take the default set.<br>'
+            f'3. Run &mdash; the board updates in about a minute.'
+        )
+        + f'</div></div>'
         f'<p style="font-family:monospace;font-size:11px;color:#8A8280;margin-top:14px;">Do nothing and nothing publishes. Blurbs can be edited in pending.json before running.</p></div>'
     )
     msg = MIMEMultipart("alternative")

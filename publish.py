@@ -3,6 +3,8 @@
 Run by the Publish workflow after email approval (or locally)."""
 
 import json
+import os
+import re
 import sys
 from pathlib import Path
 
@@ -12,8 +14,25 @@ if not pending.exists():
 
 data = json.loads(pending.read_text())
 date = data["date"]
-if len(data.get("items", [])) < 1:
+items = data.get("items", [])
+if not items:
     sys.exit("pending.json has no items — refusing to publish an empty board.")
+
+# PICKS: story numbers from the approval email, e.g. "1,4,6" (1-based).
+raw = os.environ.get("PICKS", "").strip()
+nums = [int(n) for n in re.findall(r"\d+", raw)] or [1, 2, 3]
+bad = [n for n in nums if n < 1 or n > len(items)]
+if bad:
+    sys.exit(f"Picks {bad} out of range — pending.json has {len(items)} stories.")
+if len(nums) != len(set(nums)):
+    sys.exit(f"Duplicate picks in '{raw}'.")
+if len(nums) != 3:
+    sys.exit(f"Expected exactly 3 picks, got {len(nums)}: {nums}")
+
+data["items"] = [items[n - 1] for n in nums]
+if nums != [1, 2, 3]:
+    data["trend_note"] = None  # note was written for the default set
+print(f"Publishing stories {nums} of {len(items)} candidates.")
 
 Path(f"news-{date}.json").write_text(json.dumps(data, indent=2))
 
