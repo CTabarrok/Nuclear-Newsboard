@@ -95,7 +95,7 @@
 <script>
 (function(){
   // ── set once after deploying the Cloudflare Worker ──
-  var WORKER_URL = "REPLACE_WITH_WORKER_URL";   // e.g. https://newsboard-approve.yourname.workers.dev
+  var WORKER_URL = "https://newsboardapprove.connor-tabarrok.workers.dev/";   // e.g. https://newsboard-approve.yourname.workers.dev
 
   var token = new URLSearchParams(location.search).get("t") || "";
   var selected = [], pendingDate = "";
