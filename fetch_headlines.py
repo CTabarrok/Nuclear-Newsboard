@@ -96,6 +96,12 @@ NOISE = [  # de-boost opinion/aggregation/markets churn
 ]
 
 
+def normalize_url(u):
+    """Collapse duplicate slashes in the path (feed bugs like host//articles/...),
+    leaving the scheme's // intact."""
+    return re.sub(r"(?<!:)/{2,}", "/", u or "")
+
+
 def clean(text):
     text = re.sub(r"<[^>]+>", " ", text or "")
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
@@ -206,7 +212,7 @@ def collect():
                 continue
             item = {
                 "title": strip_publisher(title),
-                "url": e.get("link", ""),
+                "url": normalize_url(e.get("link", "")),
                 "summary": clean(e.get("summary", ""))[:400],
                 "source": pub,
                 "published": when.isoformat() if when else None,
@@ -246,8 +252,8 @@ def score(item):
 N_CANDIDATES = 6
 
 
-def pick_heuristic(items):
-    """Return up to N_CANDIDATES: best story per bucket first (distinctness),
+def pick_heuristic(items, n=None):
+    """Return up to n (default N_CANDIDATES): best story per bucket first (distinctness),
     then fill with runners-up across buckets, ordered so the top 3 remain a
     distinct default set."""
     scored = []
@@ -258,16 +264,17 @@ def pick_heuristic(items):
         it["_score"], it["category"] = round(s, 1), bucket
         scored.append(it)
     scored.sort(key=lambda x: -x["_score"])
+    n = n or N_CANDIDATES
     winners, used_buckets, used = [], set(), set()
     for it in scored:  # pass 1: one per bucket
         if it["category"] not in used_buckets:
             winners.append(it)
             used_buckets.add(it["category"])
             used.add(id(it))
-        if len(winners) == N_CANDIDATES:
+        if len(winners) == n:
             break
     for it in scored:  # pass 2: fill remaining slots with runners-up
-        if len(winners) == N_CANDIDATES:
+        if len(winners) == n:
             break
         if id(it) not in used:
             winners.append(it)
@@ -345,23 +352,39 @@ def decode_gnews_url(gn_url):
                     headers={"content-type": "application/x-www-form-urlencoded;charset=UTF-8"},
                     timeout=TIMEOUT)
         m2 = re.search(r'(https?://(?!news\.google|www\.google)[^\\"\s]+)', r2.text)
-        return m2.group(1) if m2 else None
+        return normalize_url(m2.group(1)) if m2 else None
     except Exception:
         return None
 
 
+DEAD_STATUSES = {404, 410}
+
+
 def og_meta(url):
-    """Return (image, description, resolved_url) — best effort."""
+    """Return (image, description, resolved_url, dead). dead=True only for
+    definitive misses (404/410, DNS/connection failure) — bot-walls (403/429)
+    and timeouts keep the link, since it usually works for a human."""
     img = desc = None
     if "news.google.com" in url:
         real = decode_gnews_url(url)
         if not real:
-            return None, None, url
+            return None, None, url, False  # unverifiable, assume alive
         url = real
     try:
         r = requests.get(url, headers=UA, timeout=TIMEOUT, allow_redirects=True)
-        final, text = r.url, r.text
+        if r.status_code in DEAD_STATUSES:
+            return None, None, url, True
+        final, text = normalize_url(r.url), r.text
         soup = BeautifulSoup(text, "html.parser")
+        page_title = (soup.title.get_text() if soup.title else "").lower()
+        if "404" in page_title or "page not found" in page_title:
+            return None, None, final, True   # soft 404: server said 200, page says no
+        # redirect-to-home soft 404: a deep article URL bounced to a shallow index
+        from urllib.parse import urlparse
+        req_depth = len([s for s in urlparse(url).path.split("/") if s])
+        fin_depth = len([s for s in urlparse(final).path.split("/") if s])
+        if req_depth >= 2 and fin_depth <= 1 and normalize_url(final.rstrip("/")) != normalize_url(url.rstrip("/")):
+            return None, None, final, True
         for sel, attr in ((("meta", {"property": "og:image"}), "content"),
                           (("meta", {"name": "twitter:image"}), "content")):
             tag = soup.find(*sel)
@@ -384,9 +407,11 @@ def og_meta(url):
                     best, best_hits = text, hits
             if best:
                 desc = best[:300].rsplit(" ", 1)[0]
-        return img, desc, final
+        return img, desc, final, False
+    except requests.exceptions.ConnectionError:
+        return None, None, url, True   # DNS failure / refused — dead
     except Exception:
-        return None, None, url
+        return None, None, url, False  # timeout etc. — keep
 
 
 def send_email(payload, date_str):
@@ -474,13 +499,28 @@ def main():
         items = [i for i in items
                  if norm_title(i["title"]) not in shown_t and i["url"] not in shown_u]
         print(f"  {before - len(items)} excluded as already shown on previous days")
-    result = pick_claude(items) or pick_heuristic(items)
-    winners, trend_note = result
-    if len(winners) < 6:
-        print(f"  WARNING: only {len(winners)} candidates today.", file=sys.stderr)
-    print("Fetching images + descriptions…")
-    for it in winners:
-        img, desc, final_url = og_meta(it["url"])
+    # Ordered candidate queue: Claude's picks first (if any), then the
+    # heuristic ranking as backfill for any that turn out to be dead links.
+    claude_result = pick_claude(items)
+    trend_note = claude_result[1] if claude_result else None
+    queue, seen_keys = [], set()
+    for it in (claude_result[0] if claude_result else []):
+        queue.append(it)
+        seen_keys.add(norm_title(it["title"]))
+    for it in pick_heuristic(items, n=N_CANDIDATES + 8)[0]:
+        if norm_title(it["title"]) not in seen_keys:
+            queue.append(it)
+            seen_keys.add(norm_title(it["title"]))
+
+    print("Validating links + fetching images…")
+    winners = []
+    for it in queue:
+        if len(winners) == N_CANDIDATES:
+            break
+        img, desc, final_url, dead = og_meta(it["url"])
+        if dead:
+            print(f"  DEAD LINK, skipping: {it['title'][:60]} ({it['url'][:60]})")
+            continue
         it["image"] = img
         if "news.google.com" not in final_url:
             it["url"] = final_url
@@ -493,7 +533,10 @@ def main():
             it["blurb"] = f"Full story at {it['source']}."
         for k in ("_weight", "_score", "summary"):
             it.pop(k, None)
+        winners.append(it)
         print(f"  [{it['category']}] {it['title'][:70]}")
+    if len(winners) < N_CANDIDATES:
+        print(f"  WARNING: only {len(winners)} live candidates today.", file=sys.stderr)
     date_str = today_str
     save_shown(date_str, winners)
     payload = {
