@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-08",
-  "generated_utc": "2026-07-08T19:14:13+00:00",
+  "date": "2026-07-09",
+  "generated_utc": "2026-07-09T14:38:38+00:00",
   "trend_note": null,
   "items": [
     {
@@ -13,22 +13,22 @@
       "image": null
     },
     {
-      "title": "Trilateral cooperation agreement on SMR deployment",
-      "url": "https://www.world-nuclear-news.org//articles/trilateral-cooperation-agreement-on-smr-deployment",
-      "source": "World Nuclear News",
-      "published": "2026-07-08T14:06:46+00:00",
-      "category": "Global Fleet",
-      "blurb": "The USA, Japan and South Korea have signed a memorandum of cooperation to support trilateral cooperation on accelerating small modular reactor deployments in third countries, with an initial focus on the Indo-Pacific\u2026",
-      "image": null
+      "title": "NRC Targets Faster Nuclear Licensing With NEPA Streamlining Proposal",
+      "url": "https://www.powermag.com/nrc-targets-faster-nuclear-licensing-with-nepa-streamlining-proposal/",
+      "source": "POWER Magazine",
+      "published": "2026-07-09T13:24:53+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "The Nuclear Regulatory Commission (NRC) has proposed a major rewrite of its National Environmental Policy Act (NEPA) rules, opening yet another front in the agency\u2019s fast-moving campaign to modernize as directed by a\u2026",
+      "image": "https://www.powermag.com/wp-content/uploads/2025/02/seal-of-the-united-states-nuclear-regulatory-commission.png"
     },
     {
-      "title": "Four Micro Reactors Hit Criticality Milestones Crossing DOE\u2019s Finish Line on July 4th",
-      "url": "https://neutronbytes.com/2026/07/08/four-micro-reactors-hit-criticality-milestones-crossing-does-finish-line-on-july-4th/",
-      "source": "Neutron Bytes",
-      "published": "2026-07-08T13:28:41+00:00",
-      "category": "Policy & Licensing",
-      "blurb": "Four Micro Reactors Meet Criticality Milestones On 07/04/26 as part of the U.S. Department of Energy Reactor Pilot Program, Aalo Atomics\u2019 advanced reactor design, Aalo-X, was the fourth firm to successfully complete a\u2026",
-      "image": "https://neutronbytes.com/wp-content/uploads/2026/07/race-horses-finish-line.png"
+      "title": "Sizewell B lifetime extension terms agreed to 2055",
+      "url": "https://www.world-nuclear-news.org//articles/lifetime-extension-agreed-for-sizewell-b-to-2055",
+      "source": "World Nuclear News",
+      "published": "2026-07-09T15:14:10+00:00",
+      "category": "Global Fleet",
+      "blurb": "The UK's Sizewell B nuclear power plant is set to get a 20-year lifetime extension after terms were agreed by the UK government and operator EDF.",
+      "image": null
     },
     {
       "title": "Deep Fission receives prototype reactor canister",
@@ -40,13 +40,13 @@
       "image": null
     },
     {
-      "title": "Fuel loading completed at Mochovce 4",
-      "url": "https://www.world-nuclear-news.org//articles/fuel-loading-completed-at-mochovce-4",
-      "source": "World Nuclear News",
-      "published": "2026-07-06T12:49:33+00:00",
+      "title": "Eagle to begin investigative drilling at Oregon uranium site this summer",
+      "url": "https://www.ans.org/news/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/",
+      "source": "American Nuclear Society",
+      "published": "2026-07-08T15:10:29+00:00",
       "category": "Fuel Cycle",
-      "blurb": "Slovensk\u00e9 elektr\u00e1rne has announced that all 349 nuclear fuel assemblies have been successfully loaded into Mochovce 4. The process took five days, and was completed on Friday 3 July.",
-      "image": null
+      "blurb": "Nevada-based Eagle Nuclear Energy said it will conduct a 27,000-foot investigative drill program at its flagship Aurora Uranium Project along the Oregon\u2013Nevada border beginning in",
+      "image": "https://www.ans.org/file/23910/l/eagle map.jpg"
     },
     {
       "title": "Google Invests in $468-Million Funding Round for German Fusion Group",
