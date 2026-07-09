@@ -2,7 +2,7 @@ name: Morning fetch
 
 on:
   schedule:
-    - cron: "0 11 * * 1-5"   # 11:00 UTC = 6/7 AM Eastern, weekdays
+    - cron: "17 11 * * 1-5"   # 11:00 UTC = 6/7 AM Eastern, weekdays
   workflow_dispatch:          # run on demand from the Actions tab
 
 permissions:
