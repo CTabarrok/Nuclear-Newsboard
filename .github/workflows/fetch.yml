@@ -2,7 +2,7 @@ name: Morning fetch
 
 on:
   schedule:
-    - cron: "43 13 * * 1-5"   # 11:00 UTC = 6/7 AM Eastern, weekdays
+    - cron: "0 11 * * 1-5"   # 11:00 UTC = 6/7 AM Eastern, weekdays
   workflow_dispatch:          # run on demand from the Actions tab
 
 permissions:
@@ -37,6 +37,6 @@ jobs:
         run: |
           git config user.name "newsboard-bot"
           git config user.email "actions@github.com"
-          git add pending.json
+          git add pending.json shown_history.json
           git diff --cached --quiet || git commit -m "Pending picks $(date -u +%F)"
           git push
