@@ -140,6 +140,42 @@ def norm_title(t):
     return re.sub(r"[^a-z0-9 ]", "", strip_publisher(t).lower()).strip()
 
 
+HISTORY_FILE = "shown_history.json"
+HISTORY_DAYS = 30
+
+
+def load_shown(today_str):
+    """Titles/URLs shown on PREVIOUS days (today's own entry is ignored so a
+    same-day re-run regenerates freely)."""
+    try:
+        hist = json.load(open(HISTORY_FILE))
+    except Exception:
+        return set(), set()
+    titles, urls = set(), set()
+    for day, entries in hist.get("days", {}).items():
+        if day >= today_str:
+            continue
+        for e in entries:
+            if e.get("t"):
+                titles.add(e["t"])
+            if e.get("u"):
+                urls.add(e["u"])
+    return titles, urls
+
+
+def save_shown(today_str, winners):
+    """Record today's shown set; prune beyond HISTORY_DAYS."""
+    try:
+        hist = json.load(open(HISTORY_FILE))
+    except Exception:
+        hist = {"days": {}}
+    hist["days"][today_str] = [{"t": norm_title(w["title"]), "u": w["url"]} for w in winners]
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=HISTORY_DAYS)).strftime("%Y-%m-%d")
+    hist["days"] = {d: v for d, v in hist["days"].items() if d >= cutoff}
+    with open(HISTORY_FILE, "w") as f:
+        json.dump(hist, f, indent=2)
+
+
 def collect():
     seen, items = {}, []
     cutoff = datetime.now(timezone.utc) - timedelta(hours=72)
@@ -428,9 +464,16 @@ def send_email(payload, date_str):
 
 
 def main():
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     print("Collecting feeds…")
     items = collect()
     print(f"  {len(items)} candidates after dedupe")
+    shown_t, shown_u = load_shown(today_str)
+    if shown_t or shown_u:
+        before = len(items)
+        items = [i for i in items
+                 if norm_title(i["title"]) not in shown_t and i["url"] not in shown_u]
+        print(f"  {before - len(items)} excluded as already shown on previous days")
     result = pick_claude(items) or pick_heuristic(items)
     winners, trend_note = result
     if len(winners) < 6:
@@ -451,7 +494,8 @@ def main():
         for k in ("_weight", "_score", "summary"):
             it.pop(k, None)
         print(f"  [{it['category']}] {it['title'][:70]}")
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    date_str = today_str
+    save_shown(date_str, winners)
     payload = {
         "date": date_str,
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
