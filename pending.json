@@ -1,61 +1,61 @@
 {
-  "date": "2026-07-09",
-  "generated_utc": "2026-07-09T14:38:38+00:00",
+  "date": "2026-07-10",
+  "generated_utc": "2026-07-10T13:13:22+00:00",
   "trend_note": null,
   "items": [
     {
-      "title": "Dukovany project on schedule, says Czech ministry's progress report",
-      "url": "https://www.world-nuclear-news.org//articles/czechs-report-on-progress-in-first-year-of-dukovany-project",
+      "title": "Ukraine draft law on Chernobyl decommissioning to 2036 approved",
+      "url": "https://www.world-nuclear-news.org/articles/ukraine-draft-law-extends-chernobyl-decommissioning",
       "source": "World Nuclear News",
-      "published": "2026-07-08T11:47:51+00:00",
-      "category": "Corporate & Capital",
-      "blurb": "Geotechnical surveys, including drilling more than 13 kilometres of exploratory wells, have been completed, the first conceptual design has been submitted, and several Czech suppliers selected in the year since\u2026",
-      "image": null
-    },
-    {
-      "title": "NRC Targets Faster Nuclear Licensing With NEPA Streamlining Proposal",
-      "url": "https://www.powermag.com/nrc-targets-faster-nuclear-licensing-with-nepa-streamlining-proposal/",
-      "source": "POWER Magazine",
-      "published": "2026-07-09T13:24:53+00:00",
-      "category": "Policy & Licensing",
-      "blurb": "The Nuclear Regulatory Commission (NRC) has proposed a major rewrite of its National Environmental Policy Act (NEPA) rules, opening yet another front in the agency\u2019s fast-moving campaign to modernize as directed by a\u2026",
-      "image": "https://www.powermag.com/wp-content/uploads/2025/02/seal-of-the-united-states-nuclear-regulatory-commission.png"
-    },
-    {
-      "title": "Sizewell B lifetime extension terms agreed to 2055",
-      "url": "https://www.world-nuclear-news.org//articles/lifetime-extension-agreed-for-sizewell-b-to-2055",
-      "source": "World Nuclear News",
-      "published": "2026-07-09T15:14:10+00:00",
-      "category": "Global Fleet",
-      "blurb": "The UK's Sizewell B nuclear power plant is set to get a 20-year lifetime extension after terms were agreed by the UK government and operator EDF.",
-      "image": null
-    },
-    {
-      "title": "Deep Fission receives prototype reactor canister",
-      "url": "https://www.world-nuclear-news.org//articles/deep-fission-receives-prototype-reactor-canister",
-      "source": "World Nuclear News",
-      "published": "2026-07-08T11:55:49+00:00",
+      "published": "2026-07-10T08:45:14+00:00",
       "category": "Deployment & Construction",
-      "blurb": "California-based startup Deep Fission, which aims to place small modular reactors in boreholes a mile underground, has announced the delivery of its prototype reactor canister for its pilot project to the Parsons site\u2026",
+      "blurb": "The Cabinet of Ministers of Ukraine has approved a draft law which extends to 2036 the funding for the State Programme for the Decommissioning of the Chornobyl Nuclear Power Plant and the Transformation of the Shelter\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/Chernobyl_NSC_730_28649_80482.jpg"
+    },
+    {
+      "title": "NRC approves Diablo Canyon license renewal, extension",
+      "url": "https://www.ans.org/news/article-7906/nrc-approves-diablo-canyon-license-renewal-extension/",
+      "source": "American Nuclear Society",
+      "published": "2026-07-10T05:54:23+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "Background: Diablo Canyon\u2019s survival has been a roller coaster ride of sorts. In 2016, PG&E announced plans to permanently shutter the plant, with original plans to shut Unit 1 down in 2024 and Unit 2 in 2025. But in\u2026",
+      "image": "https://www.ans.org/file/17386/l/whale 5_DiabloCanyon_PGE.jpg"
+    },
+    {
+      "title": "US agency signals cooperation on T\u00fcrkiye's SMR investments",
+      "url": "https://www.turkiyetoday.com/world/us-agency-signals-cooperation-on-turkiyes-smr-investments-3223612",
+      "source": "T\u00fcrkiye Today",
+      "published": "2026-07-10T06:47:06+00:00",
+      "category": "Corporate & Capital",
+      "blurb": "USTDA says it could support T\u00fcrkiye\u2019s SMR investments through nuclear regulations, public projects, and private sector talks",
+      "image": "https://img.turkiyetoday.com/images/2026/7/10/us-agency-signals-cooperation-on-turkiyes-smr-investments-3223612_20260710092733.jpeg"
+    },
+    {
+      "title": "Trilateral cooperation agreement on SMR deployment",
+      "url": "https://www.world-nuclear-news.org/articles/trilateral-cooperation-agreement-on-smr-deployment",
+      "source": "World Nuclear News",
+      "published": "2026-07-08T14:06:46+00:00",
+      "category": "Global Fleet",
+      "blurb": "The USA, Japan and South Korea have signed a memorandum of cooperation to support trilateral cooperation on accelerating small modular reactor deployments in third countries, with an initial focus on the Indo-Pacific\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/USA-Japan-KoreaSMRs(MOFA)_91007.jpg"
+    },
+    {
+      "title": "South Korea Renews Push for Uranium Enrichment Rights as SMR Race Accelerates",
+      "url": "http://koreabizwire.com/south-korea-renews-push-for-uranium-enrichment-rights-as-smr-race-accelerates/355054",
+      "source": "Koreabizwire",
+      "published": "2026-07-10T08:25:55+00:00",
+      "category": "Fuel Cycle",
+      "blurb": "Full story at Koreabizwire.",
       "image": null
     },
     {
-      "title": "Eagle to begin investigative drilling at Oregon uranium site this summer",
-      "url": "https://www.ans.org/news/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/",
-      "source": "American Nuclear Society",
-      "published": "2026-07-08T15:10:29+00:00",
-      "category": "Fuel Cycle",
-      "blurb": "Nevada-based Eagle Nuclear Energy said it will conduct a 27,000-foot investigative drill program at its flagship Aurora Uranium Project along the Oregon\u2013Nevada border beginning in",
-      "image": "https://www.ans.org/file/23910/l/eagle map.jpg"
-    },
-    {
-      "title": "Google Invests in $468-Million Funding Round for German Fusion Group",
-      "url": "https://www.powermag.com/google-invests-in-468-million-funding-round-for-german-fusion-group/",
-      "source": "POWER Magazine",
-      "published": "2026-07-07T15:42:34+00:00",
+      "title": "Uranium Stocks Investment 2026: Nuclear Energy Renaissance & Price Forecast",
+      "url": "https://intellectia.ai/blog/uranium-stocks-investment-2026",
+      "source": "Intellectia AI",
+      "published": "2026-07-10T12:59:00+00:00",
       "category": "Corporate & Capital",
-      "blurb": "Proxima Fusion, a Munich, Germany-based group that is considered among the leading European companies working on fusion energy, said it completed a \u20ac411 million ($468 million) funding round. Proxima on July 7 said\u2026",
-      "image": "https://www.powermag.com/wp-content/uploads/2026/07/proxmia-fusion.jpg"
+      "blurb": "Discover why uranium stocks are surging in 2026. Explore nuclear energy investment opportunities, uranium price forecasts, and top stocks to watch in the energy transition.",
+      "image": "https://d159e3ysga2l0q.cloudfront.net/twitter/20260611-173344.jpg"
     }
   ]
 }
