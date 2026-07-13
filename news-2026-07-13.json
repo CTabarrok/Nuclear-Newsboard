@@ -1,0 +1,34 @@
+{
+  "date": "2026-07-13",
+  "generated_utc": "2026-07-13T13:25:13+00:00",
+  "trend_note": null,
+  "items": [
+    {
+      "title": "Third reactor at Changjiang plant starts up",
+      "url": "https://www.world-nuclear-news.org/articles/third-reactor-at-changjiang-plant-starts-up",
+      "source": "World Nuclear News",
+      "published": "2026-07-13T11:34:52+00:00",
+      "category": "Global Fleet",
+      "blurb": "Unit 3 at the Changjiang nuclear power plant in China's Hainan province has attained a sustained chain reaction for the first time, China National Nuclear Corporation has announced.",
+      "image": "https://world-nuclear-news.org/images/articles/Changjiang3firstcriticality(CNNC)_15308.jpg"
+    },
+    {
+      "title": "NRC exempts Westinghouse from design certification renewal rule",
+      "url": "https://www.world-nuclear-news.org/articles/nrc-exempts-westinghouse-from-design-certification-renewal-rule",
+      "source": "World Nuclear News",
+      "published": "2026-07-10T14:06:16+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "The US Nuclear Regulatory Commission has said Westinghouse can apply to renew the AP1000 standard design certification, incorporating lessons learned from the construction and operation of Vogtle units 3 and 4, well\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/AP1000(Westinghouse)_32779.jpg"
+    },
+    {
+      "title": "'Power hungry': Nuclear renaissance a boon for Canada's mining and reactor sectors",
+      "url": "https://www.bnnbloomberg.ca/business/2026/07/13/power-hungry-nuclear-renaissance-a-boon-for-canadas-mining-and-reactor-sectors/",
+      "source": "BNN Bloomberg",
+      "published": "2026-07-13T10:28:33+00:00",
+      "category": "Fuel Cycle",
+      "blurb": "Countries across the globe, from China and India to the United States, are either building or promising to construct more nuclear power plants. In Canada, the federal government has proposed 10 new reactors by 2040.",
+      "image": "https://www.bnnbloomberg.ca/resizer/v2/DENVX5GINBJ23I5RTPHGUUKMPQ.jpg?smart=true&auth=e60d23a981d812412164546db1a5a885ce5e0f2490d57be8806a4015820f13df&width=1200&height=630"
+    }
+  ]
+}
