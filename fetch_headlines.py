@@ -50,6 +50,12 @@ FEEDS = [
      "Google News", 1),
     ("https://news.google.com/rss/search?q=NRC%20license%20OR%20permit%20nuclear%20reactor%20when:2d&hl=en-US&gl=US&ceid=US:en",
      "Google News", 1),
+    ("https://news.google.com/rss/search?q=%22advanced%20reactor%22%20OR%20microreactor%20when:2d&hl=en-US&gl=US&ceid=US:en",
+     "Google News", 1),
+    ("https://news.google.com/rss/search?q=uranium%20OR%20enrichment%20OR%20HALEU%20when:2d&hl=en-US&gl=US&ceid=US:en",
+     "Google News", 1),
+    ("https://news.google.com/rss/search?q=%22data%20center%22%20nuclear%20power%20when:2d&hl=en-US&gl=US&ceid=US:en",
+     "Google News", 1),
 ]
 
 # Category buckets — the "distinctness" mechanism. One winner per bucket,
@@ -201,8 +207,8 @@ def collect():
                 if e.get(f):
                     when = datetime(*e[f][:6], tzinfo=timezone.utc)
                     break
-            if when and when < cutoff:
-                continue
+            if not when or when < cutoff:
+                continue  # undated entries are exactly how stale stories sneak in
             pub = source
             if source == "Google News" and e.get("source"):
                 pub = clean(e.source.get("title", source))
@@ -240,7 +246,7 @@ def score(item):
     if item["published"]:
         age_h = (datetime.now(timezone.utc)
                  - datetime.fromisoformat(item["published"])).total_seconds() / 3600
-        s += max(0, 6 - age_h / 8)
+        s += 10 - age_h / 6  # 10 pts at 0h, 0 at 60h, mildly negative to 72h
     best_bucket, best_hits = None, 0
     for bucket, words in BUCKETS.items():
         hits = sum(1 for w in words if w in text)
@@ -358,6 +364,7 @@ def decode_gnews_url(gn_url):
 
 
 DEAD_STATUSES = {404, 410}
+STALE_DAYS = 5  # article's own date older than this → treat as dead
 
 
 def og_meta(url):
@@ -379,6 +386,37 @@ def og_meta(url):
         page_title = (soup.title.get_text() if soup.title else "").lower()
         if "404" in page_title or "page not found" in page_title:
             return None, None, final, True   # soft 404: server said 200, page says no
+        # stale check: trust the article's own date over the feed's entry date
+        # (Google News re-indexes old articles with fresh timestamps)
+        page_date = None
+        tag = (soup.find("meta", {"property": "article:published_time"})
+               or soup.find("meta", {"name": "article:published_time"})
+               or soup.find("meta", {"itemprop": "datePublished"}))
+        if tag and tag.get("content"):
+            m = re.match(r"(\d{4}-\d{2}-\d{2})", tag["content"])
+            if m:
+                page_date = m.group(1)
+        if not page_date:  # JSON-LD
+            m = re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})', text)
+            if m:
+                page_date = m.group(1)
+        if not page_date:  # <time datetime="...">
+            t_el = soup.find("time", attrs={"datetime": True})
+            if t_el:
+                m = re.match(r"(\d{4}-\d{2}-\d{2})", t_el["datetime"])
+                if m:
+                    page_date = m.group(1)
+        if not page_date:  # date baked into the URL path, e.g. /2026/03/04/
+            m = re.search(r"/(20\d\d)/(\d{1,2})/(?:(\d{1,2})/)?", final)
+            if m:
+                page_date = f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3) or 15):02d}"
+        if page_date:
+            try:
+                pd = datetime.strptime(page_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                if (datetime.now(timezone.utc) - pd).days > STALE_DAYS:
+                    return None, None, final, True   # page says it's old news
+            except ValueError:
+                pass
         # redirect-to-home soft 404: a deep article URL bounced to a shallow index
         from urllib.parse import urlparse
         req_depth = len([s for s in urlparse(url).path.split("/") if s])
