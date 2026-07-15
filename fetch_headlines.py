@@ -156,16 +156,17 @@ HISTORY_FILE = "shown_history.json"
 HISTORY_DAYS = 30
 
 
-def load_shown(today_str):
-    """Titles/URLs shown on PREVIOUS days (today's own entry is ignored so a
-    same-day re-run regenerates freely)."""
+def load_shown(today_str, include_today=False):
+    """Titles/URLs already shown. Normally only previous days count (so a plain
+    same-day re-run regenerates freely); a reshuffle also counts today's set so
+    the rejected six can't come back."""
     try:
         hist = json.load(open(HISTORY_FILE))
     except Exception:
         return set(), set()
     titles, urls = set(), set()
     for day, entries in hist.get("days", {}).items():
-        if day >= today_str:
+        if day > today_str or (day == today_str and not include_today):
             continue
         for e in entries:
             if e.get("t"):
@@ -175,13 +176,15 @@ def load_shown(today_str):
     return titles, urls
 
 
-def save_shown(today_str, winners):
-    """Record today's shown set; prune beyond HISTORY_DAYS."""
+def save_shown(today_str, winners, append=False):
+    """Record today's shown set; append on reshuffle so rejected sets stack."""
     try:
         hist = json.load(open(HISTORY_FILE))
     except Exception:
         hist = {"days": {}}
-    hist["days"][today_str] = [{"t": norm_title(w["title"]), "u": w["url"]} for w in winners]
+    entries = hist["days"].get(today_str, []) if append else []
+    entries += [{"t": norm_title(w["title"]), "u": w["url"]} for w in winners]
+    hist["days"][today_str] = entries
     cutoff = (datetime.now(timezone.utc) - timedelta(days=HISTORY_DAYS)).strftime("%Y-%m-%d")
     hist["days"] = {d: v for d, v in hist["days"].items() if d >= cutoff}
     with open(HISTORY_FILE, "w") as f:
@@ -528,10 +531,13 @@ def send_email(payload, date_str):
 
 def main():
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    reshuffle = os.environ.get("RESHUFFLE", "").lower() in ("1", "true", "yes")
+    if reshuffle:
+        print("RESHUFFLE — excluding everything already shown today")
     print("Collecting feeds…")
     items = collect()
     print(f"  {len(items)} candidates after dedupe")
-    shown_t, shown_u = load_shown(today_str)
+    shown_t, shown_u = load_shown(today_str, include_today=reshuffle)
     if shown_t or shown_u:
         before = len(items)
         items = [i for i in items
@@ -550,11 +556,22 @@ def main():
             queue.append(it)
             seen_keys.add(norm_title(it["title"]))
 
+    def too_similar(a, b):
+        """Same-event guard: heavy word overlap between titles."""
+        wa = {w for w in re.findall(r"[a-z0-9]{4,}", norm_title(a))}
+        wb = {w for w in re.findall(r"[a-z0-9]{4,}", norm_title(b))}
+        if not wa or not wb:
+            return False
+        return len(wa & wb) / min(len(wa), len(wb)) >= 0.5
+
     print("Validating links + fetching images…")
     winners = []
     for it in queue:
         if len(winners) == N_CANDIDATES:
             break
+        if any(too_similar(it["title"], w["title"]) for w in winners):
+            print(f"  SIMILAR, skipping: {it['title'][:60]}")
+            continue
         img, desc, final_url, dead = og_meta(it["url"])
         if dead:
             print(f"  DEAD LINK, skipping: {it['title'][:60]} ({it['url'][:60]})")
@@ -576,7 +593,7 @@ def main():
     if len(winners) < N_CANDIDATES:
         print(f"  WARNING: only {len(winners)} live candidates today.", file=sys.stderr)
     date_str = today_str
-    save_shown(date_str, winners)
+    save_shown(date_str, winners, append=reshuffle)
     payload = {
         "date": date_str,
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
