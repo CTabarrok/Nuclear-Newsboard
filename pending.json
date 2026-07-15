@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "generated_utc": "2026-07-15T12:16:57+00:00",
+  "generated_utc": "2026-07-15T12:38:30+00:00",
   "trend_note": null,
   "items": [
     {
@@ -16,7 +16,7 @@
       "title": "DOE selects first companies for nuclear launch pad",
       "url": "https://www.ans.org/news/article-7988/doe-selects-first-companies-for-nuclear-launch-pad/",
       "source": "American Nuclear Society",
-      "published": "2026-07-14T21:40:08+00:00",
+      "published": "2026-07-15T00:35:31+00:00",
       "category": "Policy & Licensing",
       "blurb": "The Department of Energy\u2019s Office of Nuclear Energy and the National Reactor Innovation Center have announced their first selections for the Nuclear Energy Launch Pad: three companies developing microreactors and one\u2026",
       "image": "https://www.ans.org/file/24168/l/26-094-Web-Banner-Fina.jpg"
@@ -31,13 +31,13 @@
       "image": "https://s.yimg.com/lo/mysterio/api/C06A40BA0B5FDCBDE8FE9C8A507CF8DDABA4CB03EE05B6A00FB6EBE9E3123A20/subgraphmysterio/resizefill_w1200_h659;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fadvfn_uk_848%2Fec94079979be66b31baeb741d58d8bc2"
     },
     {
-      "title": "India\u2019s Largest Nuclear Power Plant Hit by Data Breach",
-      "url": "https://www.insurancejournal.com/news/international/2026/07/15/877644.htm",
-      "source": "Insurance Journal",
-      "published": "2026-07-15T09:47:30+00:00",
+      "title": "EXCLUSIVE: Files relating to India\u2019s largest nuclear power plant Kudankulam exposed in data breach",
+      "url": "https://www.reuters.com/world/india/files-relating-indias-largest-nuclear-power-plant-kudankulam-exposed-data-breach-2026-07-15/",
+      "source": "Reuters",
+      "published": "2026-07-15T09:27:15+00:00",
       "category": "Global Fleet",
-      "blurb": "Ransomware group World Leaks has posted on the dark web a huge cache of files related to India's largest nuclear plant, including purported blueprints of",
-      "image": "https://www.insurancejournal.com/app/uploads/2026/07/indian-nuclear-power-plant-Depositphotos-855704670-scaled.jpg"
+      "blurb": "Full story at Reuters.",
+      "image": null
     },
     {
       "title": "Why Uranium Equities Are Waiting for the Next Contracting Cycle",
@@ -49,13 +49,13 @@
       "image": "https://cdn.prod.website-files.com/64523461a75e4b406281bdba/6a5685c29c21796c3ce10cd7_Capture.JPG"
     },
     {
-      "title": "Files relating to India\u2019s largest nuclear power plant Kudankulam exposed in data breach",
-      "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N43G0FA:0-files-relating-to-india-s-largest-nuclear-power-plant-kudankulam-exposed-in-data-breach/",
-      "source": "TradingView",
-      "published": "2026-07-15T08:59:16+00:00",
+      "title": "India\u2019s Largest Nuclear Power Plant Hit by Data Breach",
+      "url": "https://www.insurancejournal.com/news/international/2026/07/15/877644.htm",
+      "source": "Insurance Journal",
+      "published": "2026-07-15T09:47:30+00:00",
       "category": "Global Fleet",
-      "blurb": "By Munsif Vengattil and Aditya KalraRansomware group World Leaks has posted on the dark web a huge cache of files related to India's largest nuclear plant, including purported blueprints of parts of its facilities and\u2026",
-      "image": "https://s.tradingview.com/static/images/illustrations/news-story.jpg"
+      "blurb": "Ransomware group World Leaks has posted on the dark web a huge cache of files related to India's largest nuclear plant, including purported blueprints of",
+      "image": "https://www.insurancejournal.com/app/uploads/2026/07/indian-nuclear-power-plant-Depositphotos-855704670-scaled.jpg"
     }
   ]
 }
