@@ -57,6 +57,12 @@
      padding:11px 22px;cursor:pointer}
   button.go:hover:not(:disabled){background:var(--gold-hi)}
   button.go:disabled{opacity:.35;cursor:default}
+  button.reshuffle{margin-left:auto;font-family:var(--mono);font-size:12.5px;
+     letter-spacing:.04em;background:none;color:var(--ink-dim);cursor:pointer;
+     border:1px solid var(--card-edge);border-radius:5px;padding:10px 16px}
+  button.reshuffle:hover:not(:disabled){color:var(--gold-hi);border-color:var(--gold-dim)}
+  button.reshuffle:disabled{opacity:.4;cursor:default}
+  button.go{margin-left:0}
   .msg{margin-top:20px;font-family:var(--mono);font-size:13px;line-height:1.6;
      padding:14px 16px;border-radius:6px;display:none}
   .msg.ok{display:block;background:rgba(196,160,70,.12);color:var(--gold-hi);
@@ -88,6 +94,7 @@
 
 <div class="bar" id="bar" hidden>
   <div class="count"><b id="nSel">0</b> of 3 selected</div>
+  <button class="reshuffle" id="reshuffleBtn" title="Reject all six and fetch a fresh set">&#8635; None of these &mdash; pick 6 new</button>
   <button class="go" id="publishBtn" disabled>Publish board</button>
 </div>
 <div class="msg" id="msg"></div>
@@ -172,9 +179,59 @@
     });
   });
 
+  var lastGenerated = "";
+
+  document.getElementById('reshuffleBtn').addEventListener('click', function(){
+    if (!confirm('Reject all six and fetch a fresh set? Takes 2\u20134 minutes.')) return;
+    var rb = this, pb = document.getElementById('publishBtn');
+    rb.disabled = true; pb.disabled = true;
+    rb.textContent = 'Fetching new stories\u2026';
+    fetch(WORKER_URL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ action: 'reshuffle', date: pendingDate, token: token })
+    })
+    .then(function(r){ return r.json().then(function(j){ return {ok: r.ok, j: j}; }); })
+    .then(function(res){
+      if (!res.ok) throw new Error(res.j.error || 'unknown error');
+      show('ok', 'Fresh set requested \u2014 the six rejected stories won\u2019t reappear. ' +
+                 'This page will update itself in a few minutes.');
+      pollForNewSet();
+    })
+    .catch(function(e){
+      show('err', 'Reshuffle failed: ' + e.message);
+      rb.disabled = false; rb.textContent = '\u21BB None of these \u2014 pick 6 new';
+      pb.disabled = (selected.length !== 3);
+    });
+  });
+
+  function pollForNewSet(){
+    var tries = 0, timer = setInterval(function(){
+      if (++tries > 20){ clearInterval(timer);
+        show('err', 'Still waiting on the new set \u2014 give it another minute and refresh the page.');
+        return; }
+      fetch('pending.json?v=' + Date.now())
+        .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+        .then(function(data){
+          if (data.generated_utc !== lastGenerated){
+            clearInterval(timer);
+            selected = [];
+            document.getElementById('nSel').textContent = '0';
+            document.getElementById('publishBtn').disabled = true;
+            var rb = document.getElementById('reshuffleBtn');
+            rb.disabled = false; rb.textContent = '\u21BB None of these \u2014 pick 6 new';
+            show('ok', 'New set loaded \u2014 six fresh stories below.');
+            lastGenerated = data.generated_utc;
+            render(data);
+          }
+        })
+        .catch(function(){});
+    }, 15000);
+  }
+
   fetch('pending.json?v=' + Date.now())
     .then(function(r){ if(!r.ok) throw 0; return r.json(); })
-    .then(render)
+    .then(function(data){ lastGenerated = data.generated_utc; render(data); })
     .catch(function(){ document.getElementById('empty').hidden = false; });
 })();
 </script>

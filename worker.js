@@ -49,19 +49,29 @@ export default {
     try { body = await request.json(); }
     catch { return json(400, { error: "bad JSON" }); }
 
-    const { date, picks, token } = body || {};
+    const { date, picks, token, action } = body || {};
+    const mode = action === "reshuffle" ? "reshuffle" : "publish";
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return json(400, { error: "bad date" });
-    const nums = String(picks || "").split(",").map(Number);
-    if (nums.length !== 3 || nums.some(n => !Number.isInteger(n) || n < 1 || n > 6)
-        || new Set(nums).size !== 3)
-      return json(400, { error: "picks must be 3 distinct numbers 1-6" });
+
+    let inputs, workflow;
+    if (mode === "publish") {
+      const nums = String(picks || "").split(",").map(Number);
+      if (nums.length !== 3 || nums.some(n => !Number.isInteger(n) || n < 1 || n > 6)
+          || new Set(nums).size !== 3)
+        return json(400, { error: "picks must be 3 distinct numbers 1-6" });
+      workflow = "publish.yml";
+      inputs = { picks: nums.join(",") };
+    } else {
+      workflow = "fetch.yml";
+      inputs = { reshuffle: "true" };
+    }
 
     const expected = await hmacHex(env.APPROVAL_SECRET, date);
     if ((token || "").toLowerCase() !== expected)
       return json(403, { error: "invalid or expired token" });
 
     const gh = await fetch(
-      `https://api.github.com/repos/${env.REPO}/actions/workflows/publish.yml/dispatches`,
+      `https://api.github.com/repos/${env.REPO}/actions/workflows/${workflow}/dispatches`,
       {
         method: "POST",
         headers: {
@@ -70,7 +80,7 @@ export default {
           "User-Agent": "newsboard-approval-worker",
           "X-GitHub-Api-Version": "2022-11-28",
         },
-        body: JSON.stringify({ ref: "main", inputs: { picks: nums.join(",") } }),
+        body: JSON.stringify({ ref: "main", inputs }),
       });
 
     if (gh.status === 204) return json(200, { ok: true });
