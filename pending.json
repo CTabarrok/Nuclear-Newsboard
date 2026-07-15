@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "generated_utc": "2026-07-15T12:57:14+00:00",
+  "generated_utc": "2026-07-15T13:33:59+00:00",
   "trend_note": null,
   "items": [
     {
@@ -16,7 +16,7 @@
       "title": "DOE selects first companies for nuclear launch pad",
       "url": "https://www.ans.org/news/article-7988/doe-selects-first-companies-for-nuclear-launch-pad/",
       "source": "American Nuclear Society",
-      "published": "2026-07-14T21:40:08+00:00",
+      "published": "2026-07-15T00:35:31+00:00",
       "category": "Policy & Licensing",
       "blurb": "The Department of Energy\u2019s Office of Nuclear Energy and the National Reactor Innovation Center have announced their first selections for the Nuclear Energy Launch Pad: three companies developing microreactors and one\u2026",
       "image": "https://www.ans.org/file/24168/l/26-094-Web-Banner-Fina.jpg"
@@ -49,13 +49,13 @@
       "image": "https://www.renaissancecapital.com/logos/STDN_logo_fb.jpg"
     },
     {
-      "title": "EXCLUSIVE: Files relating to India\u2019s largest nuclear power plant Kudankulam exposed in data breach",
-      "url": "https://www.reuters.com/world/india/files-relating-indias-largest-nuclear-power-plant-kudankulam-exposed-data-breach-2026-07-15/",
-      "source": "Reuters",
-      "published": "2026-07-15T09:27:15+00:00",
-      "category": "Global Fleet",
-      "blurb": "Full story at Reuters.",
-      "image": null
+      "title": "A reactor with no fuel rods and no pellets runs on uranium dissolved into molten salt, a liquid you could pour, at roughly the pressure of the air around you \u2014 and it's going into a science building across the street from a student dormitory in West Texas",
+      "url": "https://www.autonocion.com/us/salt-reactor-texas/",
+      "source": "Autonocion.com",
+      "published": "2026-07-15T13:00:15+00:00",
+      "category": "Fuel Cycle",
+      "blurb": "Nuclear reactors usually live behind fences, at the end of long access roads, surrounded by a few square miles of nothing at all. That isn't decoration. It's",
+      "image": "https://www.autonocion.com/us/wp-content/uploads/2026/07/acu-molten-salt-reactor-next-texas.jpg"
     }
   ]
 }
