@@ -459,7 +459,7 @@ def send_email(payload, date_str):
     host = os.environ.get("SMTP_HOST")
     to = os.environ.get("MAIL_TO")
     recipients = [a.strip() for a in (to or "").split(",") if a.strip()]
-if not (host and recipients):
+    if not (host and recipients):
         print("  SMTP not configured — skipping email.")
         return
     repo = os.environ.get("REPO_SLUG", "")
