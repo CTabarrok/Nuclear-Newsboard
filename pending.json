@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "generated_utc": "2026-07-20T13:08:12+00:00",
+  "generated_utc": "2026-07-20T14:52:14+00:00",
   "trend_note": null,
   "items": [
     {
@@ -13,15 +13,6 @@
       "image": "https://kalkine.com.au/featured_image/gallery/xlarge/shutterstock_2508326963_07_20_2026_09_49_18_090987.jpg"
     },
     {
-      "title": "Terra Innovatum Signs Commercial LOI with Waiken ILW for Deployment of SOLO\u2122 Microreactors at DIRECTV Latin America Data Center Facilities",
-      "url": "https://markets.businessinsider.com/news/stocks/terra-innovatum-signs-commercial-loi-with-waiken-ilw-for-deployment-of-solo-microreactors-at-directv-latin-america-data-center-facilities-1036341152",
-      "source": "markets.businessinsider.com",
-      "published": "2026-07-20T12:33:40+00:00",
-      "category": "Deployment & Construction",
-      "blurb": "Initial deployment of up to 8 MWe designed to support DIRECTV Latin America broadcasting data centers in Argentina and BrazilDemonstrates growing ...",
-      "image": "https://ml-eu.globenewswire.com/Resource/Download/803f4a9a-581a-4507-afcc-fa2b0eb86468/terra-innovatum-x-waiken-ilw-release-photo-2026-07-20.jpg"
-    },
-    {
       "title": "Triton Uranium Commences Atlas Project Drill Program at the Historic Cinch Mine",
       "url": "https://www.prnewswire.com/news-releases/triton-uranium-commences-atlas-project-drill-program-at-the-historic-cinch-mine-302829259.html",
       "source": "PR Newswire",
@@ -29,6 +20,15 @@
       "category": "Fuel Cycle",
       "blurb": "/PRNewswire/ -- Triton Uranium Corp. (\"Triton\" or the \"Company\") has commenced the 2026 drill program at its flagship Atlas Project near Uranium City,...",
       "image": "https://mma.prnewswire.com/media/3006593/Triton_Uranium_Triton_Uranium_Commences_Atlas_Project_Drill_Prog.jpg?p=facebook"
+    },
+    {
+      "title": "Terra Innovatum Signs Commercial LOI with Waiken ILW for Deployment of SOLO\u2122 Microreactors at DIRECTV Latin America Data Center Facilities",
+      "url": "https://www.financialcontent.com/article/gnwcq-2026-7-20-terra-innovatum-signs-commercial-loi-with-waiken-ilw-for-deployment-of-solo-microreactors-at-directv-latin-america-data-center-facilities",
+      "source": "FinancialContent",
+      "published": "2026-07-20T12:00:00+00:00",
+      "category": "Deployment & Construction",
+      "blurb": "Initial deployment of up to 8 MWe designed to support DIRECTV Latin America broadcasting data centers in Argentina and Brazil",
+      "image": null
     },
     {
       "title": "Korean researchers secure ABS approval for molten salt SMR-Powered Containership design",
