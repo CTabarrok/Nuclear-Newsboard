@@ -458,7 +458,8 @@ def og_meta(url):
 def send_email(payload, date_str):
     host = os.environ.get("SMTP_HOST")
     to = os.environ.get("MAIL_TO")
-    if not (host and to):
+    recipients = [a.strip() for a in (to or "").split(",") if a.strip()]
+if not (host and recipients):
         print("  SMTP not configured — skipping email.")
         return
     repo = os.environ.get("REPO_SLUG", "")
@@ -518,15 +519,15 @@ def send_email(payload, date_str):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = f"Nuclear Newsboard — {date_str} — pick 3 of 6"
     msg["From"] = os.environ.get("MAIL_FROM", os.environ.get("SMTP_USER", "newsboard"))
-    msg["To"] = to
+    msg["To"] = ", ".join(recipients)
     msg.attach(MIMEText(body, "html"))
     port = int(os.environ.get("SMTP_PORT", "587"))
     with smtplib.SMTP(host, port, timeout=30) as s:
         s.starttls()
         if os.environ.get("SMTP_USER"):
             s.login(os.environ["SMTP_USER"], os.environ["SMTP_PASS"])
-        s.sendmail(msg["From"], [to], msg.as_string())
-    print(f"  emailed picks to {to}")
+        s.sendmail(msg["From"], recipients, msg.as_string())
+    print(f"  emailed picks to {', '.join(recipients)}")
 
 
 def main():
