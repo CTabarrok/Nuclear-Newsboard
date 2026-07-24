@@ -1,61 +1,61 @@
 {
-  "date": "2026-07-23",
-  "generated_utc": "2026-07-23T12:24:35+00:00",
+  "date": "2026-07-24",
+  "generated_utc": "2026-07-24T12:20:32+00:00",
   "trend_note": null,
   "items": [
     {
-      "title": "Saudi Arabia, USA sign nuclear agreements",
-      "url": "https://www.world-nuclear-news.org/articles/saudi-arabia-usa-sign-nuclear-agreements",
+      "title": "Approval for VVER fuel production in Germany",
+      "url": "https://www.world-nuclear-news.org/articles/approval-for-vver-fuel-production-in-germany",
       "source": "World Nuclear News",
-      "published": "2026-07-23T16:41:00+00:00",
-      "category": "Corporate & Capital",
-      "blurb": "An intergovernmental agreement on the peaceful uses of nuclear energy and an accompanying bilateral safeguards agreement has been signed by Saudi Minister of Energy and Minister of Industry and Mineral Resources Prince\u2026",
-      "image": "https://world-nuclear-news.org/images/articles/USDOEUS-Saudiagreementimage(@ENERGY)_14949.jpg"
-    },
-    {
-      "title": "Landmark module installation at Lufeng 2",
-      "url": "https://www.world-nuclear-news.org/articles/landmark-module-installation-at-lufeng-2",
-      "source": "World Nuclear News",
-      "published": "2026-07-23T14:01:35+00:00",
-      "category": "Global Fleet",
-      "blurb": "The CA01 'super module' has been installed at unit 2 of the Lufeng nuclear power plant in China's Guangdong province, China General Nuclear announced.",
-      "image": "https://world-nuclear-news.org/images/articles/Lufeng2CA01-1(CGN)_22249.jpg"
-    },
-    {
-      "title": "Molten salt reactor gets US safety design approval",
-      "url": "https://www.world-nuclear-news.org/articles/molten-salt-reactor-gets-us-safety-design-approval",
-      "source": "World Nuclear News",
-      "published": "2026-07-22T10:43:41+00:00",
+      "published": "2026-07-24T11:38:09+00:00",
       "category": "Policy & Licensing",
-      "blurb": "The US Department of Energy's approval of the Nuclear Safety Design Agreement for Natura Resources' demonstration reactor is a key milestone towards first deployment of the advanced, liquid-fuelled nuclear reactor at\u2026",
-      "image": "https://world-nuclear-news.org/images/articles/Natura-Resources-receives-Nuclear-Safety-Design-Agreement-from-DOE(Natura)_57376.jpg"
+      "blurb": "The Lower Saxony Ministry for the Environment, Energy and Climate Protection, acting on behalf of the federal government, has approved an application from Framatome subsidiary Advanced Nuclear Fuels to expand its\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/VERAfuelassembly(Framatome)_64458.jpg"
     },
     {
-      "title": "US court backs Nuclear Regulatory Commission on aging reactors",
-      "url": "https://www.downtoearth.org.in/energy/us-court-backs-nuclear-regulatory-commission-on-aging-reactors",
-      "source": "Down To Earth",
-      "published": "2026-07-23T07:06:40+00:00",
+      "title": "US signs new deal to develop civilian nuclear energy for Saudi Arabia",
+      "url": "https://www.scrippsnews.com/world/middle-east/us-signs-new-deal-to-develop-civilian-nuclear-energy-for-saudi-arabia",
+      "source": "Scripps News",
+      "published": "2026-07-24T11:40:37+00:00",
+      "category": "Corporate & Capital",
+      "blurb": "The U.S. and Saudi Arabia have signed a new agreement that will give Saudi Arabia access to nuclear enrichment to support a civilian nuclear power program.",
+      "image": "https://ewscripps.brightspotcdn.com/dims4/default/f1b9a2b/2147483647/strip/true/crop/1024x538+0+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F54%2F2b%2F79e7e8414b8d96137cb9e5286eae%2Fap25322652461136.jpg"
+    },
+    {
+      "title": "HALEU enrichment begins at the American Centrifuge plant in southern Ohio",
+      "url": "https://www.ans.org/news/article-5444/haleu-enrichment-begins-at-the-american-centrifuge-plant-in-southern-ohio/",
+      "source": "American Nuclear Society",
+      "published": "2026-07-24T05:57:27+00:00",
+      "category": "Fuel Cycle",
+      "blurb": "American Centrifuge Operating (ACO), a subsidiary of Centrus Energy, has started enriching uranium hexafluoride gas to high-assay low-enriched uranium (HALEU) levels at the Department of Energy\u2019s enrichment facility in\u2026",
+      "image": "https://www.ans.org/file/13604/l/centrifuge.jpg"
+    },
+    {
+      "title": "Rolls-Royce SMR advances plans at two more Czech sites",
+      "url": "https://www.enlit.world/library/rolls-royce-smr-advances-plans-at-two-more-czech-sites",
+      "source": "Enlit World",
+      "published": "2026-07-24T12:04:44+00:00",
+      "category": "Global Fleet",
+      "blurb": "An MoU with \u010cEZ and the Czech Ministry of Industry and Trade will allow site preparation to begin at two additional SMR sites.",
+      "image": "https://enlit.stream.prepr.io/5z55pxegmjcz/w_1600,h_900,c_center/pfn_e860psbn6u8.jpg"
+    },
+    {
+      "title": "Akkuyu nuclear plant commissioning months away: Rosatom",
+      "url": "https://www.turkiyetoday.com/business/akkuyu-nuclear-plant-commissioning-months-away-rosatom-3224552",
+      "source": "T\u00fcrkiye Today",
+      "published": "2026-07-24T09:40:47+00:00",
       "category": "Deployment & Construction",
-      "blurb": "A US court rejected environmental groups\u2019 challenge that the Nuclear Regulatory Commission (NRC) acted arbitrarily by failing to discuss in greater detail the a",
-      "image": "https://cf-images.assettype.com/downtoearth%2F2026-07-23%2Fmjqjnh5x%2FThree-Mile-Island.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100"
+      "blurb": "Rosatom said Akkuyu commissioning will begin within months as T\u00fcrkiye targets first power unit\u2019s launch in 2026",
+      "image": "https://img.turkiyetoday.com/images/2026/7/24/rosatom-says-akkuyu-commissioning-work-is-months-away-3224552_20260724123007.jpg"
     },
     {
-      "title": "U.S. Inks Enrichment Deal with Saudi Arabia",
-      "url": "https://neutronbytes.com/2026/07/22/u-s-inks-enrichment-deal-with-saudi-arabia/",
-      "source": "Neutron Bytes",
-      "published": "2026-07-22T13:21:37+00:00",
-      "category": "Corporate & Capital",
-      "blurb": "The New York Times in extensive coverage reported that the Trump administration plans to announce a broad nuclear agreement\u2014known as a 123 Agreement\u2014with Saudi Arabia. Last week CNN reported that the nuclear deal was\u2026",
-      "image": "https://neutronbytes.com/wp-content/uploads/2026/04/gas-centrifuge-uranium-enrichmenrt-orano.png"
-    },
-    {
-      "title": "First Thing: US agrees Saudi uranium deal as strikes on Iran continue and Yemen\u2019s Houthis hit tankers",
-      "url": "https://www.theguardian.com/us-news/2026/jul/23/first-thing-us-agrees-saudi-uranium-deal-strikes-iran-yemen-houthis-hit-tankers",
-      "source": "The Guardian",
-      "published": "2026-07-23T12:08:00+00:00",
-      "category": "Corporate & Capital",
-      "blurb": "Conflict continues across the region as White House announces nuclear technology agreement. Plus, the artist who flattened a Tesla with a tank",
-      "image": "https://i.guim.co.uk/img/media/c3dd73ece8358d1c2ee2800242d40e2d70cb574c/474_0_3200_2560/master/3200.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=85671a3f0fba701c14701b1dff8238a0"
+      "title": "Federal Court Upholds NRC\u2019s Generic Severe-Accident Review for Nuclear Plant License Renewals",
+      "url": "https://www.powermag.com/federal-court-upholds-nrcs-generic-severe-accident-review-for-nuclear-plant-license-renewals/",
+      "source": "POWER Magazine",
+      "published": "2026-07-23T20:54:34+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "A federal appeals court has upheld the Nuclear Regulatory Commission\u2019s (NRC\u2019s) use of a generic environmental analysis for nuclear plant license renewals, rejecting claims that the agency failed to adequately consider\u2026",
+      "image": "https://www.powermag.com/wp-content/uploads/2015/06/Stock_DCCircuit_Commons.jpg"
     }
   ]
 }
