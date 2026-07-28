@@ -1,0 +1,34 @@
+{
+  "date": "2026-07-28",
+  "generated_utc": "2026-07-28T12:55:51+00:00",
+  "trend_note": null,
+  "items": [
+    {
+      "title": "Prometheus project selected for federal support",
+      "url": "https://www.world-nuclear-news.org/articles/prometheus-project-selected-for-federal-support",
+      "source": "World Nuclear News",
+      "published": "2026-07-27T15:18:25+00:00",
+      "category": "Corporate & Capital",
+      "blurb": "The Idaho National Laboratory-led Prometheus project to leverage artificial intelligence to accelerate nuclear energy deployment has been selected for a USD60 million federal investment over three years - the largest\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/Prometheusgraphic(INL)_30537.jpg"
+    },
+    {
+      "title": "Framatome Secures NRC Approval to Enrich Uranium to 10% at Richland",
+      "url": "https://energynews.pro/en/framatome-secures-nrc-approval-to-enrich-uranium-to-10-at-richland",
+      "source": "energynews.pro",
+      "published": "2026-07-28T10:04:31+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "The NRC authorizes Framatome to enrich uranium up to 10% at its Richland site, a step toward TRISO and HALEU fuels.",
+      "image": "https://img.energynews.pro/articles/a67d240e3b02a8c6.webp"
+    },
+    {
+      "title": "UK start-up Nuclear Turbines unveils novel reactor concept",
+      "url": "https://www.world-nuclear-news.org/articles/uk-start-up-nuclear-turbines-unveils-novel-reactor-concept",
+      "source": "World Nuclear News",
+      "published": "2026-07-27T12:19:32+00:00",
+      "category": "Corporate & Capital",
+      "blurb": "The spin-off from BAE Systems has raised GBP15 million (USD19.9 million) funding and emerged from stealth with a nuclear reactor design combined with high-temperature turbine technology, which it says will lead to lower\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/nuclearturbines_team_730_40849.jpg"
+    }
+  ]
+}
