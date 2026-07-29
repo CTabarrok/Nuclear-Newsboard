@@ -1,61 +1,61 @@
 {
-  "date": "2026-07-28",
-  "generated_utc": "2026-07-28T12:55:51+00:00",
+  "date": "2026-07-29",
+  "generated_utc": "2026-07-29T13:01:46+00:00",
   "trend_note": null,
   "items": [
     {
-      "title": "Prometheus project selected for federal support",
-      "url": "https://www.world-nuclear-news.org/articles/prometheus-project-selected-for-federal-support",
+      "title": "Five potential states selected to host US nuclear innovation campuses",
+      "url": "https://www.world-nuclear-news.org/articles/five-potential-states-selected-to-host-us-nuclear-innovation-campuses",
       "source": "World Nuclear News",
-      "published": "2026-07-27T15:18:25+00:00",
-      "category": "Corporate & Capital",
-      "blurb": "The Idaho National Laboratory-led Prometheus project to leverage artificial intelligence to accelerate nuclear energy deployment has been selected for a USD60 million federal investment over three years - the largest\u2026",
-      "image": "https://world-nuclear-news.org/images/articles/Prometheusgraphic(INL)_30537.jpg"
-    },
-    {
-      "title": "Uranium Royalty Corp completes landmark Sweetwater transaction",
-      "url": "https://www.miningweekly.com/article/uranium-royalty-corp-completes-landmark-sweetwater-transaction-2026-07-28",
-      "source": "Mining Weekly",
-      "published": "2026-07-28T10:04:00+00:00",
-      "category": "Fuel Cycle",
-      "blurb": "TSX- and Nasdaq-listed Uranium Royalty Corp (URC) has completed its previously announced plan of arrangement to merge its assets with those held by Sweetwater Royalties and form a new company, New URC. Under the terms\u2026",
-      "image": "https://cdn.creamermedia.com/assets/articles/images/resized/0001288389_resized_0001281861resizeduraniummineralisation2026061022.jpeg"
-    },
-    {
-      "title": "Denison begins full-scale construction at Phoenix ISR uranium mine (DNN:NYSE)",
-      "url": "https://seekingalpha.com/news/4619284-denison-begins-full-scale-construction-at-phoenix-isr-uranium-mine",
-      "source": "Seeking Alpha",
-      "published": "2026-07-28T11:47:52+00:00",
-      "category": "Deployment & Construction",
-      "blurb": "Denison Mines said it has launched full-scale construction activities at its Phoenix In-Situ Recovery uranium mine in Saskatchewan.",
-      "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/495736518/image_495736518.jpg?io=getty-c-w630"
-    },
-    {
-      "title": "Framatome Secures NRC Approval to Enrich Uranium to 10% at Richland",
-      "url": "https://energynews.pro/en/framatome-secures-nrc-approval-to-enrich-uranium-to-10-at-richland",
-      "source": "energynews.pro",
-      "published": "2026-07-28T10:04:31+00:00",
+      "published": "2026-07-29T11:15:35+00:00",
       "category": "Policy & Licensing",
-      "blurb": "The NRC authorizes Framatome to enrich uranium up to 10% at its Richland site, a step toward TRISO and HALEU fuels.",
-      "image": "https://img.energynews.pro/articles/a67d240e3b02a8c6.webp"
+      "blurb": "Following \"record levels of interest\", the US Department of Energy has announced the selection of Utah, Tennessee, Oklahoma, Louisiana, and Idaho as potential host states for Nuclear Lifecycle Innovation Campuses.",
+      "image": "https://world-nuclear-news.org/images/articles/DOEheadquarters_93034.jpg"
     },
     {
-      "title": "A 17-year-old student proposed a hybrid nuclear energy system that could reduce an Antarctic base's carbo",
-      "url": "https://timesofindia.indiatimes.com/world/rest-of-world/a-17-year-old-student-proposed-a-hybrid-nuclear-energy-system-that-could-reduce-an-antarctic-bases-carbon-emissions-by-3254-tons-annually/articleshow/132682749.cms",
-      "source": "The Times of India",
-      "published": "2026-07-28T11:13:00+00:00",
-      "category": "Global Fleet",
-      "blurb": "View this post on Instagram A post shared by Mar\u00c3\u00ada Javiera Valenzuela (@javi.stemlab)",
-      "image": "https://static.toiimg.com/thumb/msid-132682969,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
-    },
-    {
-      "title": "UK start-up Nuclear Turbines unveils novel reactor concept",
-      "url": "https://www.world-nuclear-news.org/articles/uk-start-up-nuclear-turbines-unveils-novel-reactor-concept",
+      "title": "Investment guide targets nuclear's USD6 trillion challenge",
+      "url": "https://www.world-nuclear-news.org/articles/investment-guide-targets-nuclears-usd6-trillion-challenge",
       "source": "World Nuclear News",
-      "published": "2026-07-27T12:19:32+00:00",
+      "published": "2026-07-29T17:09:31+00:00",
       "category": "Corporate & Capital",
-      "blurb": "The spin-off from BAE Systems has raised GBP15 million (USD19.9 million) funding and emerged from stealth with a nuclear reactor design combined with high-temperature turbine technology, which it says will lead to lower\u2026",
-      "image": "https://world-nuclear-news.org/images/articles/nuclearturbines_team_730_40849.jpg"
+      "blurb": "Annual investment in nuclear energy needs to triple to USD250 billion a year to meet projections of a more than tripling of capacity by 2050, according to figures in the inaugural World Nuclear Investment Guide .",
+      "image": "https://world-nuclear-news.org/images/articles/roadmapcoverpic_730_wna_86879.jpg"
+    },
+    {
+      "title": "EDF teams up with Technip Energies for EPR2 delivery",
+      "url": "https://www.world-nuclear-news.org/articles/edf-teams-up-with-technip-energies-for-epr2-delivery",
+      "source": "World Nuclear News",
+      "published": "2026-07-28T14:23:30+00:00",
+      "category": "Deployment & Construction",
+      "blurb": "French engineering and technology company Technip Energies announced it has signed a strategic framework agreement with EDF to support execution, construction management, and delivery of EDF's EPR2 reactor construction\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/EPR2unitsatPenly(EDF)_18302.jpg"
+    },
+    {
+      "title": "IAEA and George Washington University Law School Conclude First Summer School on the Legal Framework for Nuclear Energy",
+      "url": "https://www.iaea.org/newscenter/news/iaea-and-george-washington-university-law-school-conclude-first-summer-school-on-the-legal-framework-for-nuclear-energy",
+      "source": "International Atomic Energy Agency",
+      "published": "2026-07-29T08:59:38+00:00",
+      "category": "Global Fleet",
+      "blurb": "Full story at International Atomic Energy Agency.",
+      "image": null
+    },
+    {
+      "title": "Microsoft\u2019s $60 Million Genesis Mission Commitment Puts Nuclear AI at the Center",
+      "url": "https://www.powermag.com/microsofts-60-million-genesis-mission-commitment-puts-nuclear-ai-at-the-center/",
+      "source": "POWER Magazine",
+      "published": "2026-07-28T20:14:42+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "Last week, Microsoft announced a $60 million, multiyear commitment to the Department of Energy\u2019s (DOE\u2019s) Genesis Mission, the national initiative to embed artificial intelligence (AI) across the country\u2019s 17 national\u2026",
+      "image": "https://www.powermag.com/wp-content/uploads/2023/04/inl-materials-and-fuels-complex.jpg"
+    },
+    {
+      "title": "URZ3 Energy Significantly Expands Uranium Exploration Portfolio in Wyoming's Powder River Basin",
+      "url": "https://www.juniorminingnetwork.com/junior-miner-news/press-releases/1111-tsx-venture/urz/208166-urz3-energy-significantly-expands-uranium-exploration-portfolio-in-wyoming-s-powder-river-basin.html",
+      "source": "Junior Mining Network",
+      "published": "2026-07-29T11:46:01+00:00",
+      "category": "Fuel Cycle",
+      "blurb": "Full story at Junior Mining Network.",
+      "image": null
     }
   ]
 }
