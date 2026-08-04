@@ -1,60 +1,60 @@
 {
-  "date": "2026-08-03",
-  "generated_utc": "2026-08-03T13:42:25+00:00",
+  "date": "2026-08-04",
+  "generated_utc": "2026-08-04T13:03:42+00:00",
   "trend_note": null,
   "items": [
     {
-      "title": "World\u2019s Largest Energy Lender Steers Federal Financing Toward Baseload, Transmission, and Nuclear",
-      "url": "https://www.powermag.com/worlds-largest-energy-lender-steers-federal-financing-toward-baseload-transmission-and-nuclear/",
-      "source": "POWER Magazine",
-      "published": "2026-08-03T11:31:40+00:00",
-      "category": "Corporate & Capital",
-      "blurb": "The U.S. Department of Energy\u2019s (DOE\u2019s) Office of Energy Dominance Financing (EDF) closed a loan of up to $3.26 billion to American Electric Power (AEP) Texas on July 8, the office\u2019s third utility The post World\u2019s\u2026",
-      "image": "https://www.powermag.com/wp-content/uploads/2016/06/stock_transmission-sunset_al.jpg"
-    },
-    {
-      "title": "China approves construction of eight more reactors",
-      "url": "https://www.world-nuclear-news.org/articles/china-approves-construction-of-eight-more-reactors",
+      "title": "Mid-year updates from major uranium producers",
+      "url": "https://www.world-nuclear-news.org/articles/mid-year-updates-from-major-uranium-producers",
       "source": "World Nuclear News",
-      "published": "2026-08-03T13:15:26+00:00",
-      "category": "Deployment & Construction",
-      "blurb": "The construction of three pairs of Hualong One (HPR1000) reactors at the Jinqimen, Taipingling and Zhuanghe sites, as well as two Guohe One (CAP1400) reactors at the Laiyang site was approved during a State Council\u2026",
-      "image": "https://world-nuclear-news.org/images/articles/Zhuanghe(CNNC)_22748.jpg"
-    },
-    {
-      "title": "DOE Selects Five States as Nuclear Lifecycle Innovation Campuses",
-      "url": "https://neutronbytes.com/2026/08/01/doe-selects-five-states-as-nuclear-lifecycle-innovation-campuses/",
-      "source": "Neutron Bytes",
-      "published": "2026-08-02T03:27:52+00:00",
+      "published": "2026-08-04T11:24:43+00:00",
       "category": "Fuel Cycle",
-      "blurb": "DOE Selects Five States as Nuclear Lifecycle Innovation Campuses Energy Communities Alliance Offers Diverse Approaches to DOE\u2019s Needs Antares Raises $470M Series C to Deploy Nuclear Mic\u2026",
-      "image": "https://neutronbytes.com/wp-content/uploads/2026/08/doe-5-states-nuclear.png"
+      "blurb": "Kazatomprom's uranium production in the first half of 2026 was higher than the same period in 2025. Cameco's uranium production was impacted by logistical challenges earlier in the year. But both companies say they are\u2026",
+      "image": "https://world-nuclear-news.org/images/articles/Kazatompromoperations(Kazatomprom)_13566.jpg"
     },
     {
-      "title": "Bannerman Energy Ltd (ASX:BMN): Uranium Development Strategy Drives Market Attention",
-      "url": "https://kalkine.com.au/news/mining/bannerman-energy-ltd-asxbmn-uranium-development-strategy-drives-market-attention",
-      "source": "Kalkine",
-      "published": "2026-08-03T10:53:00+00:00",
-      "category": "Policy & Licensing",
-      "blurb": "Bannerman Energy Ltd (ASX:BMN): Uranium Development Strategy Drives Market Attention",
-      "image": "https://kalkine.com.au/featured_image/gallery/xlarge/shutterstock_247033738_08_03_2026_10_54_00_755332.jpg"
+      "title": "ARC partners with INL for SMR deployment",
+      "url": "https://www.world-nuclear-news.org/articles/arc-partners-with-inl-for-smr-deployment",
+      "source": "World Nuclear News",
+      "published": "2026-08-03T09:27:25+00:00",
+      "category": "Deployment & Construction",
+      "blurb": "ARC Clean Technology has signed an agreement aiming for the first-of-a-kind deployment of an ARC-100 small modular reactor at Idaho National Laboratory.",
+      "image": "https://world-nuclear-news.org/images/articles/ARC-100plant(ARCCleanTechnology)_16911_58106.jpg"
     },
     {
-      "title": "UK Public Sees Nuclear Energy As Key To Power Security",
-      "url": "https://www.manufacturingmanagement.co.uk/content/news/uk-public-sees-nuclear-energy-as-key-to-power-security",
-      "source": "Manufacturing Management",
-      "published": "2026-08-03T08:52:53+00:00",
+      "title": "Gyeongnam welcomes SMR designation as national strategic technology",
+      "url": "https://www.koreapost.com/news/articleView.html?idxno",
+      "source": "The Korea Post",
+      "published": "2026-08-04T07:30:00+00:00",
       "category": "Global Fleet",
-      "blurb": "Full story at Manufacturing Management.",
+      "blurb": "Full story at The Korea Post.",
       "image": null
     },
     {
-      "title": "Kazakhstan increases uranium production by 9% in first half of 2026",
-      "url": "https://caliber.az/en/post/kazakhstan-increases-uranium-production-by-9-in-first-half-of-2026",
-      "source": "Caliber.Az",
-      "published": "2026-08-03T08:09:54+00:00",
+      "title": "Dominion keeps options open for North Anna new build",
+      "url": "https://www.world-nuclear-news.org/articles/dominion-keeps-options-open-for-north-anna",
+      "source": "World Nuclear News",
+      "published": "2026-08-03T12:51:59+00:00",
+      "category": "Policy & Licensing",
+      "blurb": "Dominion Energy is taking steps to preserve the Early Site Permit issued to its North Anna site in 2007. The Louisa County site is already home to two operating reactors.",
+      "image": "https://world-nuclear-news.org/images/articles/North-Anna-Nuclear-Power-Station(DominionEnergy)_78112.jpg"
+    },
+    {
+      "title": "F4 Uranium Starts Helicopter Search for Radioactive Boulders",
+      "url": "https://www.stocktitan.net/news/FFUCF/f4-begins-search-for-radioactive-boulders-at-todd-and-wales-x6k2fb9dza22.html",
+      "source": "Stock Titan",
+      "published": "2026-08-04T11:00:00+00:00",
+      "category": "Corporate & Capital",
+      "blurb": "Sonia Graham became CFO Aug. 1 and was granted 325,000 RSUs; ground prospecting is planned after airborne results are integrated with existing data.",
+      "image": "https://static.stocktitan.net/company-logo/ffucf-lg.png?v=5923d80bd2"
+    },
+    {
+      "title": "Cosa Resources Announces Results of Partner Funded Airborne Radiometric Survey at the Aurora Uranium Project, Athabasca Basin, Saskatchewan",
+      "url": "https://www.juniorminingnetwork.com/junior-miner-news/press-releases/3126-tsx-venture/cosa/208445-cosa-announces-results-of-partner-funded-airborne-radiometric-survey-at-the-aurora-uranium-project-athabasca-basin-saskatchewan.html",
+      "source": "Junior Mining Network",
+      "published": "2026-08-04T12:09:16+00:00",
       "category": "Fuel Cycle",
-      "blurb": "Full story at Caliber.Az.",
+      "blurb": "Full story at Junior Mining Network.",
       "image": null
     }
   ]
